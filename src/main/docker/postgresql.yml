@@ -1,0 +1,12 @@
+version: '2'
+services:
+  jhprima-postgresql:
+    image: postgres:12.3
+    # volumes:
+    #     - ~/volumes/jhipster/jhPrima/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=jhPrima
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432

@@ -1,0 +1,26 @@
+entity Card {
+	cardNo String
+}
+
+entity CustomerHost {
+	name String
+	surname String
+}
+
+relationship OneToMany {
+	CustomerHost to Card{customerHost}
+}
+
+
+// Set pagination options
+paginate Card with infinite-scroll
+paginate CustomerHost with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

@@ -1,0 +1,33 @@
+{
+  "name": "CustomerHost",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "surname",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "card",
+      "otherEntityRelationshipName": "customerHost",
+      "relationshipName": "card"
+    }
+  ],
+  "changelogDate": "20200623190207",
+  "entityTableName": "customer_host",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jhPrima",
+  "applications": "*",
+  "microserviceName": "jhPrima"
+}
